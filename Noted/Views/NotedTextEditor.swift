@@ -12,9 +12,10 @@ struct NotedTextEditor: View {
 	
 	var body: some View {
 		TextEditor(text: $content)
+			.font(.custom("HelveticaNeue", size: 15))
 	}
 }
 
 #Preview {
-    NotedTextEditor()
+    NotedTextEditor(content: "Hello my text editor!")
 }

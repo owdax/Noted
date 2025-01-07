@@ -19,6 +19,7 @@ struct NoteEditorView: View {
 		NavigationStack {
 			Form {
 				TextField("Title", text: $title)
+					.fontWeight(.semibold)
 				NotedTextEditor(content: content)
 						.frame(minHeight: 400)
 			}
@@ -32,7 +33,7 @@ struct NoteEditorView: View {
 				}
 
 				ToolbarItem(placement: .confirmationAction) {
-					Button("Done") {
+					Button("Noted") {
 						saveNote()
 					}
 					.disabled(title.isEmpty)
