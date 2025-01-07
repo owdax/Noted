@@ -32,7 +32,7 @@ struct NoteGridView: View {
 			}
 			.padding()
 		}
-		.navigationTitle("Notes")
+		.navigationTitle("Noted")
 	}
 }
 
