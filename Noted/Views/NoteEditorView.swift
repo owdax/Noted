@@ -18,14 +18,9 @@ struct NoteEditorView: View {
 	var body: some View {
 		NavigationStack {
 			Form {
-				Section {
-					TextField("Title", text: $title)
-				}
-
-				Section {
-					TextEditor(text: $content)
-						.frame(minHeight: 200)
-				}
+				TextField("Title", text: $title)
+				NotedTextEditor(content: content)
+						.frame(minHeight: 400)
 			}
 			.navigationTitle("New Note")
 			.navigationBarTitleDisplayMode(.inline)
